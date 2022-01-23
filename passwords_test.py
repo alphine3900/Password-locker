@@ -1,4 +1,4 @@
-from passwords import Password
+from password import Password
 import unittest
 
 
@@ -29,7 +29,7 @@ def test_save_page(self):
         self.new_password.save_page()
         self.assertEqual(len(Password.user_passwords), 1)
 
-    def test_save_multiple(self):
+def test_save_multiple(self):
         '''
         this test like the first now test whether both instances created are appended to the array
         '''
@@ -38,7 +38,7 @@ def test_save_page(self):
         test_pass.save_page()
         self.assertEqual(len(Password.user_passwords), 2)
 
-    def test_delete_page(self):
+def test_delete_page(self):
         '''
         this test checks for the delete function that uses the .remove methos
         '''
@@ -48,10 +48,10 @@ def test_save_page(self):
         self.new_password.delete_page()
         self.assertEqual(len(Password.user_passwords), 1)
 
-    def test_display_page(self):
+def test_display_page(self):
         self.assertEqual(Password.display_page(), Password.user_passwords)
 
-    def test_find_page(self):
+def test_find_page(self):
         '''
         this test checks whether a password saved can be searched
         '''
@@ -61,7 +61,7 @@ def test_save_page(self):
         found_page = Password.find_by_page('instagram')
         self.assertEqual(found_page.page, test_pass.page)
 
-    def page_exists(self):
+def page_exists(self):
         '''
         returns a true/false value depending on prescence of the searched password
         '''
