@@ -3,13 +3,13 @@ import unittest
 
 class TestAccount(unittest.TestCase):
     def tearDown(self):
-        Accounts.user_accounts = []
+        Acc.user_accounts = []
 
     def setUp(self):
         '''
         this test runs before every test occurs
         '''
-        self.new_account = Accounts('alphine', 'mutwiri', 'alvo', '2000')
+        self.new_account = Acc('alphine', 'mutwiri', 'alvo', '2000')
 
     def test_init(self):
         '''
