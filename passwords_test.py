@@ -7,14 +7,14 @@ class TestPasswords(unittest.TestCase):
         '''
         this test clears the user_passwords array beore every test
         '''
-        Password.user_passwords = []
+        Pass.user_passwords = []
 
     def setUp(self):
         '''
         this test creates a new instance of the passwords class
         before every test
         '''
-        self.new_password = Password('facebook', '12345')
+        self.new_password = Pass('facebook', '12345')
 
     def test_init(self):
         '''

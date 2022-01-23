@@ -6,10 +6,10 @@ class Pass:
     user_passwords = []
 
     def save_page(self):
-        Password.user_passwords.append(self)
+        Pass.user_passwords.append(self)
 
     def delete_page(self):
-        Password.user_passwords.remove(self)
+        Pass.user_passwords.remove(self)
 
     @classmethod
     def display_page(cls):

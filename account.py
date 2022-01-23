@@ -11,13 +11,13 @@ class Acc:
         '''
         this is a save function that appends the account to the user_accounts array
         '''
-        Accounts.user_accounts.append(self)
+        Acc.user_accounts.append(self)
 
     def delete_account(self):
         '''
         a function used to delete a selected account
         '''
-        Accounts.user_accounts.remove(self)
+        Acc.user_accounts.remove(self)
     @classmethod
     def find_by_user_name(cls, user_name):
         '''

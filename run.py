@@ -1,10 +1,10 @@
 #!/usr/bin/env python3.6
-from accounts import Accounts
-from passwords import Password
+from account import Acc
+from password import Pass
 
 
 def create_account(first_name, last_name, user_name, password):
-    accounts = Accounts(first_name, last_name, user_name, password)
+    accounts = Acc(first_name, last_name, user_name, password)
     return accounts
 
 
@@ -29,7 +29,7 @@ def display_accounts():
 
 
 def create_page(page, password):
-    passwords = Password(page, password)
+    passwords = Pass(page, password)
     return passwords
 
 
@@ -50,23 +50,23 @@ def delete_page(passwords):
 
 
 def display_pages():
-    return Password.display_page()
+    return Pass.display_page()
 
 
 def main():
-    print('WELCOME TO PASSLOCK')
+    print('WELCOME TO PASSREMINDER')
     print('Use the following numbers to pick their corresponding values')
     while True:
 
-        print(" 1) LOGIN \n 2) SIGN UP \n 3) ABOUT PASSLOCK \n 4) DISPLAY ACCOUNTS \n 5) SIGN OUT")
+        print(" 1) LOGIN \n 2) SIGN UP \n 3) ABOUT PASSREMINDER \n 4) DISPLAY ACCOUNTS \n 5) SIGN OUT")
 
         choice = int(input())
         if choice == 1:
             print('Enter username')
             username = input()
-            print('Enter passoword')
+            print('Enter password')
             password = input()
-            account = find_accounts(username)
+            account = find_accounts(user_name)
             if account.user_name == username and account.password == password:
 
                 print('logged in ')
@@ -184,10 +184,10 @@ def main():
                     break
 
         elif choice == 3:
-            print('ABOUT PASSLOCK')
+            print('ABOUT PASSREMINDER')
             print(
                 '''
-            Passlock is an sort of script application that allows you to store  password from different ccounts. In case of many accounts on social media passlock can be used to store the different password from the social media  accounts.Instead of having to use one password for all your sites so that you can remember  easily,you can use different password and store them in passlock and only have to remember your passlock password. This can prove to be very helpful especially  against hackers.
+            Passlock is an sort of script application that allows you to store  password from different accounts. In case of many accounts on social media passreminder can be used to store the different password from the social media  accounts.Instead of having to use one password for all your sites so that you can remember  easily,you can use different password and store them in passlock and only have to remember your passlock password. This can prove to be very helpful especially  against hackers.
                                     ''')
 
         elif choice == 4:
