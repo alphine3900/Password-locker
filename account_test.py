@@ -28,8 +28,8 @@ def test_save_account(self):
         self.assertEqual(len(Accounts.user_accounts), 1)
 
 def test_save_multiple_accounts(self):
-           '''
-        a test that checks whether both values appended to the array are actually present\ and returns the acount itself
+        '''
+        a test that checks whether both values appended to the array are actually present and returns the acount itself
         '''
         self.new_account.save_account()
         test_account = Accounts('abcd', 'efgh', 'ijkl', 'mnop')
