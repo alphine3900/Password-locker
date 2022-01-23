@@ -55,7 +55,7 @@ def test_find_account_by_username(self):
         test_account.save_account()
         found_account = Accounts.find_by_user_name('ijkl')
         self.assertEqual(found_account.user_name, test_account.user_name)
-        def test_account_exists(self):
+def test_account_exists(self):
         '''
         unlike the previous test this test returns a true/false soort of answer depending on whether the account exists or not
         '''
