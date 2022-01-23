@@ -1,4 +1,4 @@
-class Password:
+class Pass:
     def __init__(self, page, password):
         self.page = page
         self.password = password
