@@ -16,12 +16,12 @@ def delete_account(accounts):
     accounts.delete_account()
 
 
-def find_accounts(user_name):
-    return Accounts.find_by_user_name(user_name)
+def find_accounts(username):
+    return Accounts.find_by_username(username)
 
 
-def isexist_accounts(user_name):
-    return Accounts.account_exists(user_name)
+def isexist_accounts(username):
+    return Accounts.account_exists(username)
 
 
 def display_accounts():
@@ -66,8 +66,8 @@ def main():
             username = input()
             print('Enter password')
             password = input()
-            account = find_accounts(user_name)
-            if account.user_name == username and account.password == password:
+            Accounts = find_accounts(username)
+            if account.username == username and account.password == password:
 
                 print('logged in ')
                 while True:
@@ -114,10 +114,10 @@ def main():
                             print('\n')
 
                     elif log_choice == 4:
-                        print('adios')
+                        print('thankyou')
                         break
             else:
-                print('wrong credentials')
+                print('wrong password')
 
         if choice == 2:
             print('NEW ACCOUNT')
@@ -187,7 +187,7 @@ def main():
             print('ABOUT PASSREMINDER')
             print(
                 '''
-            Passlock is an sort of script application that allows you to store  password from different accounts. In case of many accounts on social media passreminder can be used to store the different password from the social media  accounts.Instead of having to use one password for all your sites so that you can remember  easily,you can use different password and store them in passlock and only have to remember your passlock password. This can prove to be very helpful especially  against hackers.
+            Password-locker is an sort of script application that allows you to store  password from different accounts.  Instead of having to use one password for all your sites so that you can remember  easily,you can use different password and store them in password-locker and only have to remember your password-locker password. 
                                     ''')
 
         elif choice == 4:
@@ -200,7 +200,7 @@ def main():
                 print('NO ACCOUNTS')
 
         elif choice == 5:
-            print('adios')
+            print('thankyou')
             break
 
 
